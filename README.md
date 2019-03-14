@@ -1,7 +1,5 @@
 # amedigital-desafio-tecnico
-Spring WebFlux with AWS DynamoDB
-
-#Reactive Rest APIs with Spring WebFlux and DynamoDB Async
+# Reactive Rest APIs with Spring WebFlux and DynamoDB Async
 
 
 ## Requirements
