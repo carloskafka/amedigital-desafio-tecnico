@@ -65,7 +65,7 @@ In the DynamoDB console at : `localhost:8000/shell/`
 Execute:
 ```
 AWS.config.update({
-  region: "eu-west-1",
+  region: "sa-east-1",
   endpoint: 'http://localhost:8000',
   accessKeyId: "jsa",
   secretAccessKey: "javasampleapproach"
@@ -73,14 +73,16 @@ AWS.config.update({
 
 var dynamodb = new AWS.DynamoDB();
     var params = {
-        TableName : "Tweet",
+        TableName : "Planet",
         KeySchema: [
             { AttributeName: "Id", KeyType: "HASH"}
         ],
         AttributeDefinitions: [
             { AttributeName: "Id", AttributeType: "S" },
-            { AttributeName: "Text", AttributeType: "S" },
-            { AttributeName: "CreatedAt", AttributeType: "S" }
+            { AttributeName: "Name", AttributeType: "S" },
+            { AttributeName: "Climate", AttributeType: "S" },
+            { AttributeName: "Terrain", AttributeType: "S" },
+            { AttributeName: "AmountOfViewsInFilms", AttributeType: "I" }
         ],
         ProvisionedThroughput: {
             ReadCapacityUnits: 5,
