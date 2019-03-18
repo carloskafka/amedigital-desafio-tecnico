@@ -1,4 +1,4 @@
-# Reactive Rest APIs with Spring WebFlux and DynamoDB Async
+# Two Rest API's, one with Spring WebFlux and another with Spring Web and MySQL 
 
 # Getting Started
 
