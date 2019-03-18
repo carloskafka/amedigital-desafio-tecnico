@@ -1,4 +1,4 @@
-package br.carloskafka.planetstarwars;
+package br.carloskafka.planetstarwars.servicos;
 
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;

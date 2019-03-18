@@ -1,4 +1,4 @@
-package br.carloskafka.planetstarwars;
+package br.carloskafka.planetstarwars.controladores;
 
 import java.time.ZoneId;
 import java.util.TimeZone;

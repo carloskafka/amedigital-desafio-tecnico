@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1022" started-at="2019-03-18T01:19:27Z" finished-at="2019-03-18T01:19:28Z">
+  <suite name="Default suite" duration-ms="1171" started-at="2019-03-18T02:48:25Z" finished-at="2019-03-18T02:48:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1022" started-at="2019-03-18T01:19:27Z" finished-at="2019-03-18T01:19:28Z">
-      <class name="br.carloskafka.planetstarwars.TestesServicoListagemPlanetaApiStarWars">
-        <test-method status="PASS" signature="inicializar()[pri:0, instance:br.carloskafka.planetstarwars.TestesServicoListagemPlanetaApiStarWars@2f217633]" name="inicializar" is-config="true" duration-ms="835" started-at="2019-03-18T01:19:27Z" finished-at="2019-03-18T01:19:28Z">
+    <test name="Default test" duration-ms="1171" started-at="2019-03-18T02:48:25Z" finished-at="2019-03-18T02:48:26Z">
+      <class name="br.carloskafka.planetstarwars.servicos.TestesServicoListagemPlanetaApiStarWars">
+        <test-method status="PASS" signature="inicializar()[pri:0, instance:br.carloskafka.planetstarwars.servicos.TestesServicoListagemPlanetaApiStarWars@3f6b0be5]" name="inicializar" is-config="true" duration-ms="934" started-at="2019-03-18T02:48:25Z" finished-at="2019-03-18T02:48:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inicializar -->
-        <test-method status="PASS" signature="dado_um_cliente_quando_o_cliente_consultar_os_planetas_da_api_star_wars_e_estiver_fora_do_ar_entao_retorna_erro()[pri:0, instance:br.carloskafka.planetstarwars.TestesServicoListagemPlanetaApiStarWars@2f217633]" name="dado_um_cliente_quando_o_cliente_consultar_os_planetas_da_api_star_wars_e_estiver_fora_do_ar_entao_retorna_erro" duration-ms="157" started-at="2019-03-18T01:19:28Z" finished-at="2019-03-18T01:19:28Z">
+        <test-method status="PASS" signature="dado_um_cliente_quando_o_cliente_consultar_os_planetas_da_api_star_wars_e_estiver_fora_do_ar_entao_retorna_erro()[pri:0, instance:br.carloskafka.planetstarwars.servicos.TestesServicoListagemPlanetaApiStarWars@3f6b0be5]" name="dado_um_cliente_quando_o_cliente_consultar_os_planetas_da_api_star_wars_e_estiver_fora_do_ar_entao_retorna_erro" duration-ms="200" started-at="2019-03-18T02:48:26Z" finished-at="2019-03-18T02:48:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dado_um_cliente_quando_o_cliente_consultar_os_planetas_da_api_star_wars_e_estiver_fora_do_ar_entao_retorna_erro -->
-      </class> <!-- br.carloskafka.planetstarwars.TestesServicoListagemPlanetaApiStarWars -->
+        <test-method status="PASS" signature="dado_um_cliente_quando_o_cliente_consultar_os_planetas_da_api_star_wars_entao_retorna_todos_os_planetas()[pri:0, instance:br.carloskafka.planetstarwars.servicos.TestesServicoListagemPlanetaApiStarWars@3f6b0be5]" name="dado_um_cliente_quando_o_cliente_consultar_os_planetas_da_api_star_wars_entao_retorna_todos_os_planetas" duration-ms="19" started-at="2019-03-18T02:48:26Z" finished-at="2019-03-18T02:48:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dado_um_cliente_quando_o_cliente_consultar_os_planetas_da_api_star_wars_entao_retorna_todos_os_planetas -->
+      </class> <!-- br.carloskafka.planetstarwars.servicos.TestesServicoListagemPlanetaApiStarWars -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
