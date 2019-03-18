@@ -3,15 +3,15 @@ package br.carloskafka.planetstarwars.controladores;
 import java.time.ZoneId;
 import java.util.TimeZone;
 
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpEntity;
 import org.springframework.test.context.TestPropertySource;
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
 import com.wix.mysql.EmbeddedMysql;
 import com.wix.mysql.config.MysqldConfig;
@@ -43,7 +43,7 @@ public class TestesControladorPlaneta {
 		restTemplate = new TestRestTemplate();
 	}
 
-	@BeforeMethod
+	@Before
 	public void iniciarBancoDeDados() {
 		try {
 			embeddedMysql.dropSchema(schemaConfig);
@@ -53,7 +53,7 @@ public class TestesControladorPlaneta {
 		}
 	}
 
-	@AfterMethod
+	@After
 	public void pararBancoDeDados() {
 		embeddedMysql.stop();
 	}

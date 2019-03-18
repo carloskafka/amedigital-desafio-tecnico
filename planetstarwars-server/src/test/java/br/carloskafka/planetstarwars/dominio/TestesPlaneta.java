@@ -1,7 +1,7 @@
 package br.carloskafka.planetstarwars.dominio;
 
 import org.junit.Assert;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import br.carloskafka.planetstarwarsserver.dominio.Planeta;
 

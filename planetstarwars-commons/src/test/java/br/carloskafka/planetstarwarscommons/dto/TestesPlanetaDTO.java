@@ -3,8 +3,8 @@ package br.carloskafka.planetstarwarscommons.dto;
 import java.util.Arrays;
 import java.util.List;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class TestesPlanetaDTO {
 	@Test

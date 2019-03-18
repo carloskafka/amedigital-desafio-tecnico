@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Assert;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import br.carloskafka.planetstarwarscommons.dto.PlanetaDTO;
 import br.carloskafka.planetstarwarsserver.dominio.Planeta;

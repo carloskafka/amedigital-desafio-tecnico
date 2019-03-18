@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.junit.Before;
+import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
@@ -16,8 +18,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
 import br.carloskafka.planetstarwars.utilitario.JsonUtils;
 import br.carloskafka.planetstarwarscommons.contrato.ContratoRest;
@@ -36,7 +36,7 @@ public class TestesServicoListagemPlanetaApiStarWars {
 	
 	private MockMvc mockMvc;
 	
-	@BeforeClass
+	@Before
 	public void inicializar() {
 		MockitoAnnotations.initMocks(this);
 		mockMvc = MockMvcBuilders
