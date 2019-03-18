@@ -2,11 +2,13 @@
 
 # Getting Started
 
+Como a empresa Ame Digital possui uma alta demanda de requisições por segundo (rps), o uso da tecnologia assíncrona junto com a quebra do retorno (abordagem reativa) obtido pela API Star Wars otimizou o tempo de resposta da chamada da API Principal para a API Star Wars (https://swapi.co/api/planets/) de **5 segundos** para **10 milissegundos** ficando, basicamente, instantâneo.
+
 A solução possui três módulos: 
    
    - **PlanetStarWars-commons**: Responsável por compartilhar os **DTO's** ou **objetos de transferência** e o **ContratoRest** responsável por centralizar todos os **Endpoints REST** entre o projeto **server** e o **reativo**
-   - **PlanetStarWars-server**: API principal estruturada no conceito arquitetural de "separação em camadas" para se comunicar com um client onde nela possui os **objetos de domínio** com suas **regras de negócio** (como validação de campos, por exemplo), a fachada principal que simplifica todas as chamadas.
-   - **PlanetStarWars-reativo**: API com paradigma reativo que comunica com a API Star Wars (https://swapi.co/api/planets/) e retorna o resultado para a API principal
+   - **PlanetStarWars-server**: API principal que utiliza o framework **Spring Web** e é estruturada no conceito arquitetural de "separação em camadas" para se comunicar com um client onde nela possui os **objetos de domínio** com suas **regras de negócio** (como validação de campos, por exemplo), a fachada principal que simplifica todas as chamadas.
+   - **PlanetStarWars-reativo**: API que utiliza o framework **Spring WebFlux** com paradigma reativo que comunica com a API Star Wars (https://swapi.co/api/planets/) e retorna o resultado para a API principal
 
 ## Requisitos
 
