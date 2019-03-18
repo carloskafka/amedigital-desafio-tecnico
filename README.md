@@ -10,6 +10,11 @@ A solução possui três módulos:
    - **PlanetStarWars-server**: API principal que utiliza o framework **Spring Web** e é estruturada no conceito arquitetural de "separação em camadas" para se comunicar com um client onde nela possui os **objetos de domínio** com suas **regras de negócio** (como validação de campos, por exemplo), a fachada principal que simplifica todas as chamadas.
    - **PlanetStarWars-reativo**: API que utiliza o framework **Spring WebFlux** com paradigma reativo que comunica com a API Star Wars (https://swapi.co/api/planets/) e retorna o resultado para a API principal
 
+## Importante 
+
+- Através do link http://localhost:9090/planetas/ é capaz de ver a aplicação **planetstarwars-reativo** obtendo os planetas aos poucos da API Star Wars.
+- E é possível ver pressionando F5 para atualizar a página no link http://localhost:8080/planetas/api/, a API principal obtendo a resposta da api reativa e após receber tudo, o tempo de resposta fica praticamente instantâneo.
+
 ## Requisitos
 
 1. Executar `mvn install`no projeto **PlanetStarWars-commons**
