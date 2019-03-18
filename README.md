@@ -17,7 +17,7 @@ A solução possui três módulos:
 
 ## Requisitos
 
-1. Instalar banco de dados **MySQL** em https://dev.mysql.com/downloads/installer/
+1. Instalar banco de dados **MySQL** em https://dev.mysql.com/downloads/installer/ e criar o banco de dados **planetas**
 2. Executar `mvn install`no projeto **PlanetStarWars-commons**
 3. Executar as aplicações **planetstarwars-server** e **planetstarwars-reativo** com o comando `mvn spring-boot:run`
 
