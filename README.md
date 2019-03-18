@@ -1,4 +1,4 @@
-# Two Rest API's, one with Spring WebFlux and another with Spring Web and MySQL 
+# Duas API's Rest, uma utlizando o framework Spring WebFlux e a outra API utlizando o framework Spring Web e o banco de dados MySQL
 
 # Getting Started
 
