@@ -20,8 +20,10 @@ public class ServicoListagemPlanetaApiStarWars {
 
 	private static List<Planeta> planetas = new ArrayList<>();
 	
+	private WebClient webClient = WebClient.create();
+	
 	public List<Planeta> listarPlanetas() {
-		WebClient.create()
+				webClient
 				.get()
 				.uri(ContratoRest.URL_PLANETA_API_REATIVA_LISTAGEM_PLANETAS)
 				.accept(MediaType.TEXT_EVENT_STREAM)

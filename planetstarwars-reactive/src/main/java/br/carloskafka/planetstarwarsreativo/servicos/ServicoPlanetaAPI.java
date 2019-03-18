@@ -9,7 +9,7 @@ import reactor.core.publisher.Flux;
 @Component
 public class ServicoPlanetaAPI {
 
-	public Flux<ResultadoConsultaPlanetaDTO> executarConsultaPlanetaAPI() {
+	public Flux<ResultadoConsultaPlanetaDTO> executarConsultaPlanetaApi() {
 		Flux<ResultadoConsultaPlanetaDTO> resultadosConsultaPlanetaDtos = Flux.create(resultadosConsultaPlanetaDto -> {
 			new Thread(new TarefaConsultaPlanetaAPI(resultadosConsultaPlanetaDto)).start();
 		});

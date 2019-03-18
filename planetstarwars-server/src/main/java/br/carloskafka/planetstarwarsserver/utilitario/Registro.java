@@ -22,4 +22,5 @@ public class Registro {
 	public static void finalizarContexto() {
 		((AbstractApplicationContext) contexto).close();
 	}
+
 }

@@ -18,7 +18,7 @@ public class ControladorPlanetaApi {
 
 	@GetMapping(path = ContratoRest.URL_PLANETA_API_REATIVA_PLANETAS, produces = MediaType.TEXT_EVENT_STREAM_VALUE)
 	public Flux<ResultadoConsultaPlanetaDTO> executarConsultaPlanetaAPI() {
-		return servicoPlanetaApi.executarConsultaPlanetaAPI();
+		return servicoPlanetaApi.executarConsultaPlanetaApi();
 	}
 
 }

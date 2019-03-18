@@ -17,10 +17,11 @@ public class ResultadoConsultaPlanetaDTO {
 
 	public ResultadoConsultaPlanetaDTO() {
 		this.erros = new ArrayList<>();
+		this.planetasDto = new ArrayList<>();
 	}
 
 	public ResultadoConsultaPlanetaDTO(List<PlanetaDTO> planetasDto) {
-		this.planetasDto = planetasDto;
+		efetuadoComSucesso(planetasDto);
 	}
 
 	public void efetuadoComSucesso(List<PlanetaDTO> planetasDto) {
@@ -34,7 +35,7 @@ public class ResultadoConsultaPlanetaDTO {
 	}
 
 	private void marcarComoSucesso() {
-		sucesso = true;
+		setSucesso(true);
 	}
 
 	public void adicionarErro(String erro) {

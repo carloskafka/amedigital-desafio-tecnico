@@ -231,6 +231,12 @@
 			<artifactId>planetstarwarscommons</artifactId>
 			<version>0.1.0</version>
 		</dependency>
+		     <dependency>
+            <groupId>com.wix</groupId>
+            <artifactId>wix-embedded-mysql</artifactId>
+            <version>4.2.0</version>
+            <scope>test</scope>
+        </dependency>
 	</dependencies>
 
 	<repositories>
