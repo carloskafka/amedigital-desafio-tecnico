@@ -17,8 +17,9 @@ A solução possui três módulos:
 
 ## Requisitos
 
-1. Executar `mvn install`no projeto **PlanetStarWars-commons**
-2. Executar as aplicações **planetstarwars-server** e **planetstarwars-reativo** com o comando `mvn spring-boot:run`
+1. Instalar banco de dados **MySQL** em https://dev.mysql.com/downloads/installer/
+2. Executar `mvn install`no projeto **PlanetStarWars-commons**
+3. Executar as aplicações **planetstarwars-server** e **planetstarwars-reativo** com o comando `mvn spring-boot:run`
 
 O servidor da aplicação **planetstarwars-server** irá iniciar em <http://localhost:8080>.
 O servidor da aplicação **planetstarwars-reativo** irá iniciar em <http://localhost:9090>.
