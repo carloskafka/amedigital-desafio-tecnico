@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="br.carloskafka.planetstarwarscommons.dto.TestesResultadoConsultaPlanetaDTO">
+      <class name="br.carloskafka.planetstarwarscommons.dto.TestesPlanetaDTO">
         <methods>
-          <include name="dado_um_novo_resultado_consulta_planeta_quando_for_criado_entao_retorna_um_novo"/>
+          <include name="dado_um_novo_planetadto_quando_for_criado_entao_retorna_um_novo"/>
         </methods>
-      </class> <!-- br.carloskafka.planetstarwarscommons.dto.TestesResultadoConsultaPlanetaDTO -->
+      </class> <!-- br.carloskafka.planetstarwarscommons.dto.TestesPlanetaDTO -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

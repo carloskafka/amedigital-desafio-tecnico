@@ -3,6 +3,7 @@ package br.carloskafka.planetstarwarscommons.dto;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PlanetaDTO {
@@ -10,6 +11,7 @@ public class PlanetaDTO {
 	private String nome;
 	private String clima;
 	private String terreno;
+	@JsonIgnore
 	private List<String> filmesAparecidos;
 	private int quantidadeDeAparicoesEmFilmes;
 
@@ -59,6 +61,7 @@ public class PlanetaDTO {
 
 	public void setFilmesAparecidos(List<String> filmesAparecidos) {
 		this.filmesAparecidos = filmesAparecidos;
+		setQuantidadeDeAparicoesEmFilmes(filmesAparecidos.size());
 	}
 
 	public int getQuantidadeDeAparicoesEmFilmes() {
