@@ -18,6 +18,7 @@ public class FabricaPlaneta {
 			planetaDto.setNome(planeta.getNome());
 			planetaDto.setClima(planeta.getClima());
 			planetaDto.setTerreno(planeta.getTerreno());
+			planetaDto.setQuantidadeDeAparicoesEmFilmes(planeta.getQuantidadeDeAparicoesEmFilmes());
 		}
 		return planetaDto;
 	}
@@ -42,7 +43,7 @@ public class FabricaPlaneta {
 			planeta.setNome(planetaDto.getNome());
 			planeta.setClima(planetaDto.getClima());
 			planeta.setTerreno(planetaDto.getTerreno());
-			planeta.setQuantidadeDeAparicoesEmFilmes(planetaDto.getQuantidadeDeAparicoesEmFilmes());
+			planeta.setQuantidadeDeAparicoesEmFilmes(planetaDto.getFilmesAparecidos().size());
 		}
 		return planeta;
 	}

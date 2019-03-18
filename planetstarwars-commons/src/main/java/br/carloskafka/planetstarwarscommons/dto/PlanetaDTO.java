@@ -11,6 +11,7 @@ public class PlanetaDTO {
 	private String clima;
 	private String terreno;
 	private List<String> filmesAparecidos;
+	private int quantidadeDeAparicoesEmFilmes;
 
 	public PlanetaDTO() {
 		filmesAparecidos = new ArrayList<>();
@@ -61,7 +62,11 @@ public class PlanetaDTO {
 	}
 
 	public int getQuantidadeDeAparicoesEmFilmes() {
-		return getFilmesAparecidos().size();
+		return quantidadeDeAparicoesEmFilmes;
+	}
+
+	public void setQuantidadeDeAparicoesEmFilmes(int quantidadeDeAparicoesEmFilmes) {
+		this.quantidadeDeAparicoesEmFilmes = quantidadeDeAparicoesEmFilmes;
 	}
 
 	@Override
