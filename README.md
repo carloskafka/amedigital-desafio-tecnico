@@ -4,9 +4,9 @@
 
 A solução possui três módulos: 
    
-   - **PlanetStarWars-commons**: Responsável por compartilhar os **DTO's** entre o projeto **server** e o **reativo**
-   - **PlanetStarWars-server**: API principal para se comunicar com um client.
-   - **PlanetStarWars-reativo**: API reativa que comunica com a API Star Wars (https://swapi.co/api/planets/) e retorna o resultado para a API principal
+   - **PlanetStarWars-commons**: Responsável por compartilhar os **DTO's** ou **objetos de transferência** e o **ContratoRest** responsável por centralizar todos os **Endpoints REST** entre o projeto **server** e o **reativo**
+   - **PlanetStarWars-server**: API principal estruturada no conceito arquitetural de "separação em camadas" para se comunicar com um client onde nela possui os **objetos de domínio** com suas **regras de negócio** (como validação de campos, por exemplo), a fachada principal que simplifica todas as chamadas.
+   - **PlanetStarWars-reativo**: API com paradigma reativo que comunica com a API Star Wars (https://swapi.co/api/planets/) e retorna o resultado para a API principal
 
 ## Requisitos
 
