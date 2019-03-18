@@ -2,15 +2,19 @@
 
 # Getting Started
 
-## Requirements
+A solução possui três módulos: 
+   
+   - **PlanetStarWars-commons**: Responsável por compartilhar os **DTO's** entre o projeto **server** e o **reativo**
+   - **PlanetStarWars-server**: API principal para se comunicar com um client.
+   - **PlanetStarWars-reativo**: API reativa que comunica com a API Star Wars (https://swapi.co/api/planets/) e retorna o resultado para a API principal
 
-Run the app `mvn spring-boot:run`
+## Requisitos
 
-The server will start at <http://localhost:8080>.
+Executar a aplicação `mvn spring-boot:run`
 
-## Exploring the Rest APIs
+O servidor irá iniciar em <http://localhost:8080>.
 
-The application defines following REST APIs
+## Rest Endpoints
 
 ```
 1. POST /planetas/ - Adicionar planeta
@@ -25,6 +29,6 @@ The application defines following REST APIs
 
 ```
 
-## Running integration tests
+## Execução de testes de integração
 
-The project also contains integration tests for all the Rest APIs. For running the integration tests, go to the root directory of the project and type `mvn test` in your terminal.
+O projeto também contém testes de integração para todos os endpoints da API. Para executar os testes de integração, vá até o diretório raíz do projeto e escreva `mvn test` no terminal (windows ou linux).
