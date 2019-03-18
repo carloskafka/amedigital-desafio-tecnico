@@ -3,11 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="br.carloskafka.planetstarwars.fabricas.TestesFabricaPlaneta">
+      <class name="br.carloskafka.planetstarwars.repositorios.TestesRepositorioPlaneta">
         <methods>
-          <include name="dado_uma_fabrica_planeta_quando_converter_um_planeta_dominio_para_planeta_dto_entao_retorna_um_planeta_dto"/>
+          <include name="dado_um_repositorio_planeta_quando_buscar_um_planeta_por_id_entao_retorna_o_planeta_obtido"/>
+          <include name="dado_um_repositorio_planeta_quando_listar_planetas_entao_retorna_os_planetas_obtidos"/>
+          <include name="dado_um_repositorio_planeta_quando_adicionar_um_novo_planeta_entao_retorna_um_planeta_salvo"/>
+          <include name="dado_um_repositorio_planeta_quando_buscar_um_planeta_por_nome_entao_retorna_o_planeta_obtido"/>
         </methods>
-      </class> <!-- br.carloskafka.planetstarwars.fabricas.TestesFabricaPlaneta -->
+      </class> <!-- br.carloskafka.planetstarwars.repositorios.TestesRepositorioPlaneta -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
