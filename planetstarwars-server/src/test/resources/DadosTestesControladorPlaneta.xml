@@ -1,0 +1,5 @@
+<dataset>	
+	<planeta id="1000" nome="Alderaan" clima="temperate" quantidade_de_aparicoes_em_filmes="2"/>
+	<planeta id="2000" nome="Yavin IV" clima="temperate, tropical" quantidade_de_aparicoes_em_filmes="1"/>
+	<planeta id="3000" nome="Hoth" clima="frozen" quantidade_de_aparicoes_em_filmes="1"/>
+</dataset>
