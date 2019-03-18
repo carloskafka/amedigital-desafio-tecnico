@@ -10,9 +10,10 @@ A solução possui três módulos:
 
 ## Requisitos
 
-Executar a aplicação `mvn spring-boot:run`
+Executar as aplicações **planetstarwars-server** **planetstarwars-reativo** com o comando `mvn spring-boot:run`
 
-O servidor irá iniciar em <http://localhost:8080>.
+O servidor da aplicação **planetstarwars-server** irá iniciar em <http://localhost:8080>.
+O servidor da aplicação **planetstarwars-reativo** irá iniciar em <http://localhost:9090>.
 
 ## Rest Endpoints
 
