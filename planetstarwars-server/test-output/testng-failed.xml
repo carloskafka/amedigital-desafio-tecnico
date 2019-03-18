@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="br.carloskafka.planetstarwars.TestesServicoListagemPlanetaApiStarWars">
+      <class name="br.carloskafka.planetstarwars.fabricas.TestesFabricaPlaneta">
         <methods>
-          <include name="dado_um_cliente_quando_o_cliente_consultar_os_planetas_da_api_star_wars_entao_retorna_todos_os_planetas"/>
+          <include name="dado_uma_fabrica_planeta_quando_converter_um_planeta_dominio_para_planeta_dto_entao_retorna_um_planeta_dto"/>
         </methods>
-      </class> <!-- br.carloskafka.planetstarwars.TestesServicoListagemPlanetaApiStarWars -->
+      </class> <!-- br.carloskafka.planetstarwars.fabricas.TestesFabricaPlaneta -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -42,6 +42,7 @@ public class FabricaPlaneta {
 			planeta.setNome(planetaDto.getNome());
 			planeta.setClima(planetaDto.getClima());
 			planeta.setTerreno(planetaDto.getTerreno());
+			planeta.setQuantidadeDeAparicoesEmFilmes(planetaDto.getQuantidadeDeAparicoesEmFilmes());
 		}
 		return planeta;
 	}

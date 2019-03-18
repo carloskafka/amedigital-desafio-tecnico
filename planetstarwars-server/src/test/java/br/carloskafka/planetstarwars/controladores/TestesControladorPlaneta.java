@@ -9,6 +9,8 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpEntity;
 import org.springframework.test.context.TestPropertySource;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.wix.mysql.EmbeddedMysql;
@@ -21,7 +23,6 @@ import br.carloskafka.planetstarwarscommons.dto.PlanetaDTO;
 import br.carloskafka.planetstarwarscommons.dto.ResultadoConsultaPlanetaDTO;
 import br.carloskafka.planetstarwarscommons.dto.ResultadoEdicaoPlanetaDTO;
 import br.carloskafka.planetstarwarsserver.utilitario.HttpUtils;
-import br.carloskafka.planetstarwarsserver.utilitario.Registro;
 
 @SpringBootTest
 @TestPropertySource(locations = "classpath:application-test.properties")
@@ -39,24 +40,23 @@ public class TestesControladorPlaneta {
 	private TestRestTemplate restTemplate;
 
 	public TestesControladorPlaneta() {
-		Registro.inicializarContexto();
 		restTemplate = new TestRestTemplate();
 	}
 
-//	@BeforeMethod
-//	public void iniciarBancoDeDados() {
-//		try {
-//			embeddedMysql.dropSchema(schemaConfig);
-//			embeddedMysql = embeddedMysql.addSchema(schemaConfig);
-//		} catch (CommandFailedException e) {
-//			embeddedMysql = embeddedMysql.addSchema(schemaConfig);
-//		}
-//	}
-//
-//	@AfterMethod
-//	public void pararBancoDeDados() {
-//		embeddedMysql.stop();
-//	}
+	@BeforeMethod
+	public void iniciarBancoDeDados() {
+		try {
+			embeddedMysql.dropSchema(schemaConfig);
+			embeddedMysql = embeddedMysql.addSchema(schemaConfig);
+		} catch (Exception e) {
+			embeddedMysql = embeddedMysql.addSchema(schemaConfig);
+		}
+	}
+
+	@AfterMethod
+	public void pararBancoDeDados() {
+		embeddedMysql.stop();
+	}
 
 	@Test
 	public void dado_um_cliente_quando_o_cliente_consultar_todos_os_planetas_entao_retorna_a_listagem_de_planetas() {

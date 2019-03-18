@@ -63,7 +63,7 @@ public class PlanetaDTO {
 	public int getQuantidadeDeAparicoesEmFilmes() {
 		return getFilmesAparecidos().size();
 	}
-	
+
 	@Override
 	public String toString() {
 		return "PlanetaDTO [id=" + id + ", nome=" + nome + ", clima=" + clima + ", terreno=" + terreno

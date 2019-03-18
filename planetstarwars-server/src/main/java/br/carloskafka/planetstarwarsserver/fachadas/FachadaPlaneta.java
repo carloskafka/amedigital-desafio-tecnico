@@ -9,7 +9,7 @@ import br.carloskafka.planetstarwarscommons.dto.ResultadoEdicaoPlanetaDTO;
 import br.carloskafka.planetstarwarsserver.dominio.Planeta;
 import br.carloskafka.planetstarwarsserver.fabricas.FabricaPlaneta;
 import br.carloskafka.planetstarwarsserver.repositorios.RepositorioPlaneta;
-import br.carloskafka.planetstarwarsserver.servicos.planeta.ServicoListagemPlanetaApiStarWars;
+import br.carloskafka.planetstarwarsserver.servicos.ServicoListagemPlanetaApiStarWars;
 
 @Component
 public class FachadaPlaneta {
@@ -28,7 +28,9 @@ public class FachadaPlaneta {
 		if (planeta.isValidado()) {
 			Planeta planetaApiObtido = servicoListagemPlanetaApiStarWars.buscarPlanetaPorNome(planeta.getNome());
 
-			planeta.setQuantidadeDeAparicoesEmFilmes(planetaApiObtido.getQuantidadeDeAparicoesEmFilmes());
+			if (planetaApiObtido != null) {
+				planeta.setQuantidadeDeAparicoesEmFilmes(planetaApiObtido.getQuantidadeDeAparicoesEmFilmes());
+			}
 
 			PlanetaDTO planetaDtoSalvo = FabricaPlaneta.converterParaDTO(repositorioPlaneta.adicionarPlaneta(planeta));
 			resultadoEdicaoPlanetaDTO.efetuadoComSucesso(planetaDtoSalvo);

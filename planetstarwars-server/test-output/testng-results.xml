@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1171" started-at="2019-03-18T02:48:25Z" finished-at="2019-03-18T02:48:26Z">
+  <suite name="Default suite" duration-ms="47" started-at="2019-03-18T03:24:10Z" finished-at="2019-03-18T03:24:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1171" started-at="2019-03-18T02:48:25Z" finished-at="2019-03-18T02:48:26Z">
-      <class name="br.carloskafka.planetstarwars.servicos.TestesServicoListagemPlanetaApiStarWars">
-        <test-method status="PASS" signature="inicializar()[pri:0, instance:br.carloskafka.planetstarwars.servicos.TestesServicoListagemPlanetaApiStarWars@3f6b0be5]" name="inicializar" is-config="true" duration-ms="934" started-at="2019-03-18T02:48:25Z" finished-at="2019-03-18T02:48:26Z">
+    <test name="Default test" duration-ms="47" started-at="2019-03-18T03:24:10Z" finished-at="2019-03-18T03:24:10Z">
+      <class name="br.carloskafka.planetstarwars.dominio.TestesPlaneta">
+        <test-method status="PASS" signature="dado_um_planeta_quando_for_validar_se_um_planeta_e_igual_ao_outro_planeta_entao_retorna_verdadeiro()[pri:0, instance:br.carloskafka.planetstarwars.dominio.TestesPlaneta@731a74c]" name="dado_um_planeta_quando_for_validar_se_um_planeta_e_igual_ao_outro_planeta_entao_retorna_verdadeiro" duration-ms="0" started-at="2019-03-18T03:24:10Z" finished-at="2019-03-18T03:24:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- inicializar -->
-        <test-method status="PASS" signature="dado_um_cliente_quando_o_cliente_consultar_os_planetas_da_api_star_wars_e_estiver_fora_do_ar_entao_retorna_erro()[pri:0, instance:br.carloskafka.planetstarwars.servicos.TestesServicoListagemPlanetaApiStarWars@3f6b0be5]" name="dado_um_cliente_quando_o_cliente_consultar_os_planetas_da_api_star_wars_e_estiver_fora_do_ar_entao_retorna_erro" duration-ms="200" started-at="2019-03-18T02:48:26Z" finished-at="2019-03-18T02:48:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dado_um_cliente_quando_o_cliente_consultar_os_planetas_da_api_star_wars_e_estiver_fora_do_ar_entao_retorna_erro -->
-        <test-method status="PASS" signature="dado_um_cliente_quando_o_cliente_consultar_os_planetas_da_api_star_wars_entao_retorna_todos_os_planetas()[pri:0, instance:br.carloskafka.planetstarwars.servicos.TestesServicoListagemPlanetaApiStarWars@3f6b0be5]" name="dado_um_cliente_quando_o_cliente_consultar_os_planetas_da_api_star_wars_entao_retorna_todos_os_planetas" duration-ms="19" started-at="2019-03-18T02:48:26Z" finished-at="2019-03-18T02:48:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dado_um_cliente_quando_o_cliente_consultar_os_planetas_da_api_star_wars_entao_retorna_todos_os_planetas -->
-      </class> <!-- br.carloskafka.planetstarwars.servicos.TestesServicoListagemPlanetaApiStarWars -->
+        </test-method> <!-- dado_um_planeta_quando_for_validar_se_um_planeta_e_igual_ao_outro_planeta_entao_retorna_verdadeiro -->
+      </class> <!-- br.carloskafka.planetstarwars.dominio.TestesPlaneta -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

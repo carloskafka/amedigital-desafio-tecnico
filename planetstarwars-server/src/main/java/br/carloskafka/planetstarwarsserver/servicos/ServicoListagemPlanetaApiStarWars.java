@@ -1,4 +1,4 @@
-package br.carloskafka.planetstarwarsserver.servicos.planeta;
+package br.carloskafka.planetstarwarsserver.servicos;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +13,7 @@ import br.carloskafka.planetstarwarscommons.contrato.ContratoRest;
 import br.carloskafka.planetstarwarscommons.dto.PlanetaDTO;
 import br.carloskafka.planetstarwarscommons.dto.ResultadoConsultaPlanetaDTO;
 import br.carloskafka.planetstarwarsserver.dominio.Planeta;
+import br.carloskafka.planetstarwarsserver.fabricas.FabricaPlaneta;
 
 @Component
 public class ServicoListagemPlanetaApiStarWars {
@@ -31,12 +32,7 @@ public class ServicoListagemPlanetaApiStarWars {
 				.flatMapMany(resposta -> resposta.bodyToFlux(ResultadoConsultaPlanetaDTO.class))
 				.subscribe((resultadoConsultaPlanetaDTO) -> {
 					for (PlanetaDTO planetaDto : resultadoConsultaPlanetaDTO.getPlanetasDto()) {
-						Planeta planeta = new Planeta();
-
-						planeta.setNome(planetaDto.getNome());
-						planeta.setClima(planetaDto.getClima());
-						planeta.setTerreno(planetaDto.getTerreno());
-						planeta.setQuantidadeDeAparicoesEmFilmes(planetaDto.getQuantidadeDeAparicoesEmFilmes());
+						Planeta planeta = FabricaPlaneta.converterParaDominio(planetaDto);
 
 						if (!planetas.contains(planeta)) {
 							planetas.add(planeta);
@@ -49,12 +45,14 @@ public class ServicoListagemPlanetaApiStarWars {
 
 	public Planeta buscarPlanetaPorNome(String nome) {
 		Planeta planetaObtido = planetas.stream().filter(planeta -> planeta.getNome().equals(nome)).findFirst()
-				.orElse(new Planeta());
+				.orElse(null);
 
-		planetaObtido.validarObrigatoriedadeDeDados();
+		if (planetaObtido != null) {
+			planetaObtido.validarObrigatoriedadeDeDados();
 
-		if (!planetaObtido.isValidado()) {
-			logger.error("Nenhum planeta encontrado para o nome " + nome);
+			if (!planetaObtido.isValidado()) {
+				logger.error("Nenhum planeta encontrado para o nome " + nome);
+			}
 		}
 
 		return planetaObtido;
