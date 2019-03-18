@@ -18,7 +18,7 @@ A solução possui três módulos:
 ## Requisitos
 
 1. Executar `mvn install`no projeto **PlanetStarWars-commons**
-2. Executar as aplicações **planetstarwars-server** **planetstarwars-reativo** com o comando `mvn spring-boot:run`
+2. Executar as aplicações **planetstarwars-server** e **planetstarwars-reativo** com o comando `mvn spring-boot:run`
 
 O servidor da aplicação **planetstarwars-server** irá iniciar em <http://localhost:8080>.
 O servidor da aplicação **planetstarwars-reativo** irá iniciar em <http://localhost:9090>.
