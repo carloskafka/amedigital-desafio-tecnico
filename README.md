@@ -41,4 +41,11 @@ O servidor da aplicação **planetstarwars-reativo** irá iniciar em <http://loc
 
 ## Execução de testes de integração
 
+
 O projeto também contém testes de integração para todos os endpoints da API. Para executar os testes de integração, vá até o diretório raíz do projeto e escreva `mvn test` no terminal (windows ou linux).
+
+Execute o comando `mvn test` nessa sequência
+
+1. **PlanetStarWars-commons**
+2. **PlanetStarWars-server**:
+3. **PlanetStarWars-reativo**
