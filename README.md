@@ -17,7 +17,7 @@ The application defines following REST APIs
 
 2. GET /planetas/ - Listar planetas
 
-3. GET/planetas/api-star-wars/ - Listar planetas pela API Star Wars
+3. GET /planetas/api/ - Listar planetas pela API Star Wars
 
 4. GET /planetas/{nome} - buscar planeta por nome
 
