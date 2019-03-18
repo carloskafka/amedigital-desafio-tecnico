@@ -30,6 +30,54 @@ public class TestesControladorPlaneta extends TestesIntegracaoAbstrato{
 
 		Assert.assertEquals(resultadoConsultaPlaneta.getPlanetasDto().size(), quantidadeDePlanetasEsperado);
 	}
+	
+	@Test
+	public void dado_um_cliente_quando_o_cliente_consultar_todos_os_planetas_por_nome_entao_retorna_a_listagem_de_planetas() {
+		String nome = "Alderaan";
+		int quantidadeDePlanetasEsperado = 1;
+
+		ResultadoConsultaPlanetaDTO resultadoConsultaPlaneta = restTemplate
+				.getForEntity(ContratoRest.URL_COMPLETA_PLANETAS_POR_NOME.replace(ContratoRest.URL_PARAMETRO_NOME, nome), ResultadoConsultaPlanetaDTO.class).getBody();
+
+		Assert.assertEquals(resultadoConsultaPlaneta.getPlanetasDto().size(), quantidadeDePlanetasEsperado);
+	}
+	
+	@Test
+	public void dado_um_cliente_quando_o_cliente_consultar_todos_os_planetas_por_nome_invalido_entao_retorna_a_listagem_vazia_de_planetas() {
+		String erro = "Nenhum planeta foi encontrado com esse nome.";
+		String nome = "INVALIDO";
+		int quantidadeDePlanetasEsperado = 0;
+
+		ResultadoConsultaPlanetaDTO resultadoConsultaPlaneta = restTemplate
+				.getForEntity(ContratoRest.URL_COMPLETA_PLANETAS_POR_NOME.replace(ContratoRest.URL_PARAMETRO_NOME, nome), ResultadoConsultaPlanetaDTO.class).getBody();
+
+		Assert.assertEquals(resultadoConsultaPlaneta.getPlanetasDto().size(), quantidadeDePlanetasEsperado);
+		Assert.assertTrue(resultadoConsultaPlaneta.getErros().contains(erro));
+	}
+	
+	@Test
+	public void dado_um_cliente_quando_o_cliente_consultar_todos_os_planetas_por_id_entao_retorna_a_listagem_de_planetas() {
+		String id = "1000";
+		int quantidadeDePlanetasEsperado = 1;
+
+		ResultadoConsultaPlanetaDTO resultadoConsultaPlaneta = restTemplate
+				.getForEntity(ContratoRest.URL_COMPLETA_PLANETAS_POR_ID.replace(ContratoRest.URL_PARAMETRO_ID, id), ResultadoConsultaPlanetaDTO.class).getBody();
+
+		Assert.assertEquals(resultadoConsultaPlaneta.getPlanetasDto().size(), quantidadeDePlanetasEsperado);
+	}
+	
+	@Test
+	public void dado_um_cliente_quando_o_cliente_consultar_todos_os_planetas_por_id_inexistente_entao_retorna_a_listagem_vazia_de_planetas() {
+		String erro = "Nenhum planeta foi encontrado com esse id.";
+		String id = "9999999";
+		int quantidadeDePlanetasEsperado = 0;
+
+		ResultadoConsultaPlanetaDTO resultadoConsultaPlaneta = restTemplate
+				.getForEntity(ContratoRest.URL_COMPLETA_PLANETAS_POR_ID.replace(ContratoRest.URL_PARAMETRO_ID, id), ResultadoConsultaPlanetaDTO.class).getBody();
+
+		Assert.assertEquals(resultadoConsultaPlaneta.getPlanetasDto().size(), quantidadeDePlanetasEsperado);
+		Assert.assertTrue(resultadoConsultaPlaneta.getErros().contains(erro));
+	}
 
 	@Test
 	public void dado_um_cliente_quando_o_cliente_adicionar_um_novo_planeta_entao_retorna_o_novo_planeta() {
