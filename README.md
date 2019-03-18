@@ -13,7 +13,7 @@ A solução possui três módulos:
 ## Importante 
 
 - Através do link http://localhost:9090/planetas/ é capaz de ver a aplicação **planetstarwars-reativo** obtendo os planetas aos poucos da API Star Wars.
-- E é possível ver pressionando F5 para atualizar a página no link http://localhost:8080/planetas/api/, a aplicação **planetstarwars-server** obtendo a resposta da api reativa e após receber tudo, o tempo de resposta fica praticamente instantâneo.
+- E é possível ver pressionando F5 para atualizar a página no link http://localhost:8080/planetas/api/, a aplicação **planetstarwars-server** obtendo a resposta da aplicação **planetstarwars-reativo** e após receber tudo, o tempo de resposta fica praticamente instantâneo.
 
 ## Requisitos
 
